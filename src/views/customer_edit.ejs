@@ -1,0 +1,28 @@
+<%- include ('partials/_header') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class=" col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.id %>" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" value="<%= data.name %>" class="form-group">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="address" value="<%= data.address %>" class="form-group">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone"  value="<%= data.phone %>" class="form-group">
+                        </div>
+                        <button type="submit" class="btn ntn-primary">
+                            Edit Customer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/_footer') %>
